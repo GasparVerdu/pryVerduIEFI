@@ -52,11 +52,17 @@
     <Compile Include="frmAgregarCliente.Designer.cs">
       <DependentUpon>frmAgregarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEliminarCliente.cs">
+    <Compile Include="frmConsultarUnCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEliminarCliente.Designer.cs">
-      <DependentUpon>frmEliminarCliente.cs</DependentUpon>
+    <Compile Include="frmConsultarUnCliente.Designer.cs">
+      <DependentUpon>frmConsultarUnCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEliminarModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEliminarModificarCliente.Designer.cs">
+      <DependentUpon>frmEliminarModificarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
@@ -64,25 +70,46 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModificarCliente.cs">
+    <Compile Include="frmListarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModificarCliente.Designer.cs">
-      <DependentUpon>frmModificarCliente.cs</DependentUpon>
+    <Compile Include="frmListarClientes.Designer.cs">
+      <DependentUpon>frmListarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarPorActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarPorActividad.Designer.cs">
+      <DependentUpon>frmListarPorActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarPorBarrio.Designer.cs">
+      <DependentUpon>frmListarPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarSaldos.Designer.cs">
+      <DependentUpon>frmListarSaldos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarCliente.resx">
       <DependentUpon>frmAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEliminarCliente.resx">
-      <DependentUpon>frmEliminarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultarUnCliente.resx">
+      <DependentUpon>frmConsultarUnCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEliminarModificarCliente.resx">
+      <DependentUpon>frmEliminarModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModificarCliente.resx">
-      <DependentUpon>frmModificarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmListarClientes.resx">
+      <DependentUpon>frmListarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

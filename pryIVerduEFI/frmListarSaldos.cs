@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryIVerduEFI
 {
-    public partial class frmModificarCliente : Form
+    public partial class frmListarSaldos : Form
     {
-        public frmModificarCliente()
+        public frmListarSaldos()
         {
             InitializeComponent();
         }

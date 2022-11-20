@@ -28,97 +28,178 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombreApellido = new System.Windows.Forms.TextBox();
             this.lblDocumento = new System.Windows.Forms.Label();
-            this.btnAgregarCliente = new System.Windows.Forms.Button();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.txtBarrio = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNombreYApellido = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblBarrio = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.txtNombreyApellido = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.mskDocumento = new System.Windows.Forms.MaskedTextBox();
+            this.cboBarrio = new System.Windows.Forms.ComboBox();
+            this.cboActividad = new System.Windows.Forms.ComboBox();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
+            this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre y apellido";
-            // 
-            // txtNombreApellido
-            // 
-            this.txtNombreApellido.Location = new System.Drawing.Point(109, 70);
-            this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(277, 20);
-            this.txtNombreApellido.TabIndex = 1;
             // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(12, 22);
+            this.lblDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocumento.Location = new System.Drawing.Point(12, 29);
             this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(62, 13);
-            this.lblDocumento.TabIndex = 3;
-            this.lblDocumento.Text = "Documento";
+            this.lblDocumento.Size = new System.Drawing.Size(100, 18);
+            this.lblDocumento.TabIndex = 0;
+            this.lblDocumento.Text = "Documento:";
             // 
-            // btnAgregarCliente
+            // lblNombreYApellido
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(144, 252);
-            this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(118, 23);
-            this.btnAgregarCliente.TabIndex = 4;
-            this.btnAgregarCliente.Text = "Agregar Nuevo";
-            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.lblNombreYApellido.AutoSize = true;
+            this.lblNombreYApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreYApellido.Location = new System.Drawing.Point(12, 87);
+            this.lblNombreYApellido.Name = "lblNombreYApellido";
+            this.lblNombreYApellido.Size = new System.Drawing.Size(149, 18);
+            this.lblNombreYApellido.TabIndex = 1;
+            this.lblNombreYApellido.Text = "Nombre y apellido:";
             // 
-            // btnCargar
+            // lblDireccion
             // 
-            this.btnCargar.Location = new System.Drawing.Point(268, 252);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(118, 23);
-            this.btnCargar.TabIndex = 5;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(12, 145);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(85, 18);
+            this.lblDireccion.TabIndex = 2;
+            this.lblDireccion.Text = "Direccion:";
             // 
-            // txtBarrio
+            // lblBarrio
             // 
-            this.txtBarrio.Location = new System.Drawing.Point(109, 22);
-            this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(160, 20);
-            this.txtBarrio.TabIndex = 7;
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarrio.Location = new System.Drawing.Point(12, 203);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(59, 18);
+            this.lblBarrio.TabIndex = 3;
+            this.lblBarrio.Text = "Barrio:";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Direccion";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 261);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 18);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Actividad:";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(261, 373);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.Location = new System.Drawing.Point(13, 319);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(56, 18);
+            this.lblSaldo.TabIndex = 6;
+            this.lblSaldo.Text = "Saldo:";
+            // 
+            // txtNombreyApellido
+            // 
+            this.txtNombreyApellido.Location = new System.Drawing.Point(177, 87);
+            this.txtNombreyApellido.Name = "txtNombreyApellido";
+            this.txtNombreyApellido.Size = new System.Drawing.Size(159, 20);
+            this.txtNombreyApellido.TabIndex = 8;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(109, 120);
+            this.txtDireccion.Location = new System.Drawing.Point(177, 146);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(153, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(159, 20);
             this.txtDireccion.TabIndex = 9;
+            // 
+            // mskDocumento
+            // 
+            this.mskDocumento.Location = new System.Drawing.Point(177, 30);
+            this.mskDocumento.Mask = "00000000";
+            this.mskDocumento.Name = "mskDocumento";
+            this.mskDocumento.Size = new System.Drawing.Size(159, 20);
+            this.mskDocumento.TabIndex = 10;
+            // 
+            // cboBarrio
+            // 
+            this.cboBarrio.FormattingEnabled = true;
+            this.cboBarrio.Location = new System.Drawing.Point(177, 204);
+            this.cboBarrio.Name = "cboBarrio";
+            this.cboBarrio.Size = new System.Drawing.Size(159, 21);
+            this.cboBarrio.TabIndex = 11;
+            // 
+            // cboActividad
+            // 
+            this.cboActividad.FormattingEnabled = true;
+            this.cboActividad.Location = new System.Drawing.Point(177, 261);
+            this.cboActividad.Name = "cboActividad";
+            this.cboActividad.Size = new System.Drawing.Size(159, 21);
+            this.cboActividad.TabIndex = 12;
+            // 
+            // txtSaldo
+            // 
+            this.txtSaldo.Location = new System.Drawing.Point(177, 319);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(159, 20);
+            this.txtSaldo.TabIndex = 13;
+            // 
+            // tSConeccionBd
+            // 
+            this.tSConeccionBd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tSConeccionBd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tSEstadoConeccion});
+            this.tSConeccionBd.Location = new System.Drawing.Point(0, 397);
+            this.tSConeccionBd.Name = "tSConeccionBd";
+            this.tSConeccionBd.Size = new System.Drawing.Size(360, 25);
+            this.tSConeccionBd.TabIndex = 15;
+            this.tSConeccionBd.Text = "toolStrip1";
+            // 
+            // tSEstadoConeccion
+            // 
+            this.tSEstadoConeccion.Name = "tSEstadoConeccion";
+            this.tSEstadoConeccion.Size = new System.Drawing.Size(86, 22);
+            this.tSEstadoConeccion.Text = "toolStripLabel1";
             // 
             // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 300);
+            this.ClientSize = new System.Drawing.Size(360, 422);
+            this.Controls.Add(this.tSConeccionBd);
+            this.Controls.Add(this.txtSaldo);
+            this.Controls.Add(this.cboActividad);
+            this.Controls.Add(this.cboBarrio);
+            this.Controls.Add(this.mskDocumento);
             this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBarrio);
-            this.Controls.Add(this.btnCargar);
-            this.Controls.Add(this.btnAgregarCliente);
+            this.Controls.Add(this.txtNombreyApellido);
+            this.Controls.Add(this.lblSaldo);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblBarrio);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblNombreYApellido);
             this.Controls.Add(this.lblDocumento);
-            this.Controls.Add(this.txtNombreApellido);
-            this.Controls.Add(this.label1);
             this.Name = "frmAgregarCliente";
             this.Text = "Agregar cliente";
+            this.tSConeccionBd.ResumeLayout(false);
+            this.tSConeccionBd.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,13 +207,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombreApellido;
         private System.Windows.Forms.Label lblDocumento;
-        private System.Windows.Forms.Button btnAgregarCliente;
-        private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.TextBox txtBarrio;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombreYApellido;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblBarrio;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.TextBox txtNombreyApellido;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.MaskedTextBox mskDocumento;
+        private System.Windows.Forms.ComboBox cboBarrio;
+        private System.Windows.Forms.ComboBox cboActividad;
+        private System.Windows.Forms.TextBox txtSaldo;
+        private System.Windows.Forms.ToolStrip tSConeccionBd;
+        private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
     }
 }

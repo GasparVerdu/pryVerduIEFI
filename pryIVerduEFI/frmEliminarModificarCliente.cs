@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace pryIVerduEFI
 {
-    public partial class frmEliminarCliente : Form
+    public partial class frmEliminarModificarCliente : Form
     {
-        public frmEliminarCliente()
+        public frmEliminarModificarCliente()
         {
             InitializeComponent();
         }
 
         private void frmEliminarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grbDatos_Enter(object sender, EventArgs e)
         {
 
         }
