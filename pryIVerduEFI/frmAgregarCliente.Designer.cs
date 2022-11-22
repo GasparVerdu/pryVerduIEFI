@@ -42,7 +42,8 @@
             this.cboActividad = new System.Windows.Forms.ComboBox();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
-            this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.tSLabelEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +105,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblSaldo
             // 
@@ -139,14 +141,17 @@
             // 
             // cboBarrio
             // 
+            this.cboBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(177, 204);
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(159, 21);
             this.cboBarrio.TabIndex = 11;
+            this.cboBarrio.SelectedIndexChanged += new System.EventHandler(this.cboBarrio_SelectedIndexChanged);
             // 
             // cboActividad
             // 
+            this.cboActividad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboActividad.FormattingEnabled = true;
             this.cboActividad.Location = new System.Drawing.Point(177, 261);
             this.cboActividad.Name = "cboActividad";
@@ -164,24 +169,35 @@
             // 
             this.tSConeccionBd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tSConeccionBd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tSEstadoConeccion});
+            this.tSLabelEstadoConeccion});
             this.tSConeccionBd.Location = new System.Drawing.Point(0, 397);
             this.tSConeccionBd.Name = "tSConeccionBd";
             this.tSConeccionBd.Size = new System.Drawing.Size(360, 25);
             this.tSConeccionBd.TabIndex = 15;
             this.tSConeccionBd.Text = "toolStrip1";
             // 
-            // tSEstadoConeccion
+            // tSLabelEstadoConeccion
             // 
-            this.tSEstadoConeccion.Name = "tSEstadoConeccion";
-            this.tSEstadoConeccion.Size = new System.Drawing.Size(86, 22);
-            this.tSEstadoConeccion.Text = "toolStripLabel1";
+            this.tSLabelEstadoConeccion.Name = "tSLabelEstadoConeccion";
+            this.tSLabelEstadoConeccion.Size = new System.Drawing.Size(86, 22);
+            this.tSLabelEstadoConeccion.Text = "toolStripLabel1";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(177, 373);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 16;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(360, 422);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.tSConeccionBd);
             this.Controls.Add(this.txtSaldo);
             this.Controls.Add(this.cboActividad);
@@ -198,6 +214,7 @@
             this.Controls.Add(this.lblDocumento);
             this.Name = "frmAgregarCliente";
             this.Text = "Agregar cliente";
+            this.Load += new System.EventHandler(this.frmAgregarCliente_Load);
             this.tSConeccionBd.ResumeLayout(false);
             this.tSConeccionBd.PerformLayout();
             this.ResumeLayout(false);
@@ -221,6 +238,7 @@
         private System.Windows.Forms.ComboBox cboActividad;
         private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.ToolStrip tSConeccionBd;
-        private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
+        private System.Windows.Forms.ToolStripLabel tSLabelEstadoConeccion;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

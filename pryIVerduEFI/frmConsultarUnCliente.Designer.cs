@@ -40,10 +40,11 @@
             this.lblBarrio = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblNombreYApellido = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.lblDocumentoCliente = new System.Windows.Forms.Label();
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
             this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.mskDocumento = new System.Windows.Forms.MaskedTextBox();
             this.grbDatos.SuspendLayout();
             this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // grbDatos
             // 
@@ -159,13 +161,6 @@
             this.lblNombreYApellido.TabIndex = 0;
             this.lblNombreYApellido.Text = "Nombre y apellido:";
             // 
-            // txtDocumento
-            // 
-            this.txtDocumento.Location = new System.Drawing.Point(156, 22);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(100, 20);
-            this.txtDocumento.TabIndex = 8;
-            // 
             // lblDocumentoCliente
             // 
             this.lblDocumentoCliente.AutoSize = true;
@@ -181,7 +176,7 @@
             this.tSConeccionBd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tSConeccionBd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tSEstadoConeccion});
-            this.tSConeccionBd.Location = new System.Drawing.Point(0, 389);
+            this.tSConeccionBd.Location = new System.Drawing.Point(0, 423);
             this.tSConeccionBd.Name = "tSConeccionBd";
             this.tSConeccionBd.Size = new System.Drawing.Size(356, 25);
             this.tSConeccionBd.TabIndex = 14;
@@ -193,18 +188,38 @@
             this.tSEstadoConeccion.Size = new System.Drawing.Size(86, 22);
             this.tSEstadoConeccion.Text = "toolStripLabel1";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(259, 393);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 17;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // mskDocumento
+            // 
+            this.mskDocumento.Location = new System.Drawing.Point(139, 22);
+            this.mskDocumento.Mask = "00000000";
+            this.mskDocumento.Name = "mskDocumento";
+            this.mskDocumento.Size = new System.Drawing.Size(112, 20);
+            this.mskDocumento.TabIndex = 18;
+            // 
             // frmConsultarUnCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 414);
+            this.ClientSize = new System.Drawing.Size(356, 448);
+            this.Controls.Add(this.mskDocumento);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.tSConeccionBd);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.grbDatos);
-            this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.lblDocumentoCliente);
             this.Name = "frmConsultarUnCliente";
             this.Text = "Consultar un cliente";
+            this.Load += new System.EventHandler(this.frmConsultarUnCliente_Load);
             this.grbDatos.ResumeLayout(false);
             this.grbDatos.PerformLayout();
             this.tSConeccionBd.ResumeLayout(false);
@@ -228,9 +243,10 @@
         private System.Windows.Forms.Label lblBarrio;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblNombreYApellido;
-        private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.Label lblDocumentoCliente;
         private System.Windows.Forms.ToolStrip tSConeccionBd;
         private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.MaskedTextBox mskDocumento;
     }
 }

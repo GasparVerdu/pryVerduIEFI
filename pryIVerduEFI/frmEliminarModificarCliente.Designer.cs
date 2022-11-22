@@ -29,24 +29,23 @@
         private void InitializeComponent()
         {
             this.lblDocumentoCliente = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
             this.grbDatos = new System.Windows.Forms.GroupBox();
-            this.lblNombreYApellido = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblBarrio = new System.Windows.Forms.Label();
-            this.lblActividad = new System.Windows.Forms.Label();
-            this.lblSaldo = new System.Windows.Forms.Label();
-            this.txtNombreApellido = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtSaldo = new System.Windows.Forms.TextBox();
-            this.cboBarrio = new System.Windows.Forms.ComboBox();
             this.cboActividad = new System.Windows.Forms.ComboBox();
+            this.cboBarrio = new System.Windows.Forms.ComboBox();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtNombreApellido = new System.Windows.Forms.TextBox();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblActividad = new System.Windows.Forms.Label();
+            this.lblBarrio = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblNombreYApellido = new System.Windows.Forms.Label();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
-            this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.tSLabelEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.mskDocumento = new System.Windows.Forms.MaskedTextBox();
             this.grbDatos.SuspendLayout();
             this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
@@ -60,13 +59,6 @@
             this.lblDocumentoCliente.Size = new System.Drawing.Size(85, 16);
             this.lblDocumentoCliente.TabIndex = 0;
             this.lblDocumentoCliente.Text = "Documento";
-            // 
-            // txtDocumento
-            // 
-            this.txtDocumento.Location = new System.Drawing.Point(172, 35);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(100, 20);
-            this.txtDocumento.TabIndex = 1;
             // 
             // grbDatos
             // 
@@ -89,41 +81,42 @@
             this.grbDatos.Text = "Datos del cliente";
             this.grbDatos.Enter += new System.EventHandler(this.grbDatos_Enter);
             // 
-            // lblNombreYApellido
+            // cboActividad
             // 
-            this.lblNombreYApellido.AutoSize = true;
-            this.lblNombreYApellido.Location = new System.Drawing.Point(6, 46);
-            this.lblNombreYApellido.Name = "lblNombreYApellido";
-            this.lblNombreYApellido.Size = new System.Drawing.Size(149, 18);
-            this.lblNombreYApellido.TabIndex = 0;
-            this.lblNombreYApellido.Text = "Nombre y apellido:";
+            this.cboActividad.FormattingEnabled = true;
+            this.cboActividad.Location = new System.Drawing.Point(158, 205);
+            this.cboActividad.Name = "cboActividad";
+            this.cboActividad.Size = new System.Drawing.Size(132, 26);
+            this.cboActividad.TabIndex = 9;
             // 
-            // lblDireccion
+            // cboBarrio
             // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(6, 100);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(85, 18);
-            this.lblDireccion.TabIndex = 1;
-            this.lblDireccion.Text = "Direccion:";
+            this.cboBarrio.FormattingEnabled = true;
+            this.cboBarrio.Location = new System.Drawing.Point(158, 154);
+            this.cboBarrio.Name = "cboBarrio";
+            this.cboBarrio.Size = new System.Drawing.Size(132, 26);
+            this.cboBarrio.TabIndex = 8;
             // 
-            // lblBarrio
+            // txtSaldo
             // 
-            this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(6, 154);
-            this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(59, 18);
-            this.lblBarrio.TabIndex = 2;
-            this.lblBarrio.Text = "Barrio:";
+            this.txtSaldo.Location = new System.Drawing.Point(158, 262);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(132, 24);
+            this.txtSaldo.TabIndex = 7;
             // 
-            // lblActividad
+            // txtDireccion
             // 
-            this.lblActividad.AutoSize = true;
-            this.lblActividad.Location = new System.Drawing.Point(6, 208);
-            this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(80, 18);
-            this.lblActividad.TabIndex = 3;
-            this.lblActividad.Text = "Actividad:";
+            this.txtDireccion.Location = new System.Drawing.Point(158, 100);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(132, 24);
+            this.txtDireccion.TabIndex = 6;
+            // 
+            // txtNombreApellido
+            // 
+            this.txtNombreApellido.Location = new System.Drawing.Point(158, 44);
+            this.txtNombreApellido.Name = "txtNombreApellido";
+            this.txtNombreApellido.Size = new System.Drawing.Size(132, 24);
+            this.txtNombreApellido.TabIndex = 5;
             // 
             // lblSaldo
             // 
@@ -134,42 +127,41 @@
             this.lblSaldo.TabIndex = 4;
             this.lblSaldo.Text = "Saldo:";
             // 
-            // txtNombreApellido
+            // lblActividad
             // 
-            this.txtNombreApellido.Location = new System.Drawing.Point(158, 44);
-            this.txtNombreApellido.Name = "txtNombreApellido";
-            this.txtNombreApellido.Size = new System.Drawing.Size(132, 24);
-            this.txtNombreApellido.TabIndex = 5;
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.Location = new System.Drawing.Point(6, 208);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(80, 18);
+            this.lblActividad.TabIndex = 3;
+            this.lblActividad.Text = "Actividad:";
             // 
-            // txtDireccion
+            // lblBarrio
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(158, 100);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(132, 24);
-            this.txtDireccion.TabIndex = 6;
+            this.lblBarrio.AutoSize = true;
+            this.lblBarrio.Location = new System.Drawing.Point(6, 154);
+            this.lblBarrio.Name = "lblBarrio";
+            this.lblBarrio.Size = new System.Drawing.Size(59, 18);
+            this.lblBarrio.TabIndex = 2;
+            this.lblBarrio.Text = "Barrio:";
             // 
-            // txtSaldo
+            // lblDireccion
             // 
-            this.txtSaldo.Location = new System.Drawing.Point(158, 262);
-            this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.Size = new System.Drawing.Size(132, 24);
-            this.txtSaldo.TabIndex = 7;
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(6, 100);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(85, 18);
+            this.lblDireccion.TabIndex = 1;
+            this.lblDireccion.Text = "Direccion:";
             // 
-            // cboBarrio
+            // lblNombreYApellido
             // 
-            this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(158, 154);
-            this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(132, 26);
-            this.cboBarrio.TabIndex = 8;
-            // 
-            // cboActividad
-            // 
-            this.cboActividad.FormattingEnabled = true;
-            this.cboActividad.Location = new System.Drawing.Point(158, 205);
-            this.cboActividad.Name = "cboActividad";
-            this.cboActividad.Size = new System.Drawing.Size(132, 26);
-            this.cboActividad.TabIndex = 9;
+            this.lblNombreYApellido.AutoSize = true;
+            this.lblNombreYApellido.Location = new System.Drawing.Point(6, 46);
+            this.lblNombreYApellido.Name = "lblNombreYApellido";
+            this.lblNombreYApellido.Size = new System.Drawing.Size(149, 18);
+            this.lblNombreYApellido.TabIndex = 0;
+            this.lblNombreYApellido.Text = "Nombre y apellido:";
             // 
             // btnGrabar
             // 
@@ -177,26 +169,19 @@
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 3;
-            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.Text = "Modificar";
             this.btnGrabar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(166, 415);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(57, 415);
+            this.btnBorrar.Location = new System.Drawing.Point(182, 415);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 5;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnBuscar
             // 
@@ -206,36 +191,44 @@
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // tSConeccionBd
             // 
             this.tSConeccionBd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tSConeccionBd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tSEstadoConeccion});
+            this.tSLabelEstadoConeccion});
             this.tSConeccionBd.Location = new System.Drawing.Point(0, 451);
             this.tSConeccionBd.Name = "tSConeccionBd";
             this.tSConeccionBd.Size = new System.Drawing.Size(385, 25);
             this.tSConeccionBd.TabIndex = 15;
             this.tSConeccionBd.Text = "toolStrip1";
             // 
-            // tSEstadoConeccion
+            // tSLabelEstadoConeccion
             // 
-            this.tSEstadoConeccion.Name = "tSEstadoConeccion";
-            this.tSEstadoConeccion.Size = new System.Drawing.Size(86, 22);
-            this.tSEstadoConeccion.Text = "toolStripLabel1";
+            this.tSLabelEstadoConeccion.Name = "tSLabelEstadoConeccion";
+            this.tSLabelEstadoConeccion.Size = new System.Drawing.Size(86, 22);
+            this.tSLabelEstadoConeccion.Text = "toolStripLabel1";
+            // 
+            // mskDocumento
+            // 
+            this.mskDocumento.Location = new System.Drawing.Point(154, 38);
+            this.mskDocumento.Mask = "00000000";
+            this.mskDocumento.Name = "mskDocumento";
+            this.mskDocumento.Size = new System.Drawing.Size(112, 20);
+            this.mskDocumento.TabIndex = 19;
             // 
             // frmEliminarModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 476);
+            this.Controls.Add(this.mskDocumento);
             this.Controls.Add(this.tSConeccionBd);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.grbDatos);
-            this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.lblDocumentoCliente);
             this.Name = "frmEliminarModificarCliente";
             this.Text = "Eliminar cliente";
@@ -252,7 +245,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblDocumentoCliente;
-        private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.GroupBox grbDatos;
         private System.Windows.Forms.Label lblSaldo;
         private System.Windows.Forms.Label lblActividad;
@@ -265,10 +257,10 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtNombreApellido;
         private System.Windows.Forms.Button btnGrabar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ToolStrip tSConeccionBd;
-        private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
+        private System.Windows.Forms.ToolStripLabel tSLabelEstadoConeccion;
+        private System.Windows.Forms.MaskedTextBox mskDocumento;
     }
 }

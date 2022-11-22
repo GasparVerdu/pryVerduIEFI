@@ -32,16 +32,16 @@
             this.clieintesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarOEliminarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarSaldosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarPorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuConeccion = new System.Windows.Forms.ToolStrip();
-            this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.tSLabelEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStripMenuConeccion.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,13 @@
             this.consultarClienteToolStripMenuItem.Text = "Consultar un cliente";
             this.consultarClienteToolStripMenuItem.Click += new System.EventHandler(this.consultarClienteToolStripMenuItem_Click);
             // 
+            // modificarOEliminarClienteToolStripMenuItem
+            // 
+            this.modificarOEliminarClienteToolStripMenuItem.Name = "modificarOEliminarClienteToolStripMenuItem";
+            this.modificarOEliminarClienteToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.modificarOEliminarClienteToolStripMenuItem.Text = "Modificar o eliminar cliente";
+            this.modificarOEliminarClienteToolStripMenuItem.Click += new System.EventHandler(this.modificarOEliminarClienteToolStripMenuItem_Click);
+            // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -91,20 +98,6 @@
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             this.listarToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.listarToolStripMenuItem.Text = "Listar";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.salirToolStripMenuItem.Text = "Salir ";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // modificarOEliminarClienteToolStripMenuItem
-            // 
-            this.modificarOEliminarClienteToolStripMenuItem.Name = "modificarOEliminarClienteToolStripMenuItem";
-            this.modificarOEliminarClienteToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.modificarOEliminarClienteToolStripMenuItem.Text = "Modificar o eliminar cliente";
-            this.modificarOEliminarClienteToolStripMenuItem.Click += new System.EventHandler(this.modificarOEliminarClienteToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem1
             // 
@@ -133,33 +126,40 @@
             // actividadToolStripMenuItem
             // 
             this.actividadToolStripMenuItem.Name = "actividadToolStripMenuItem";
-            this.actividadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.actividadToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.actividadToolStripMenuItem.Text = "Actividad";
             this.actividadToolStripMenuItem.Click += new System.EventHandler(this.actividadToolStripMenuItem_Click);
             // 
             // barrioToolStripMenuItem
             // 
             this.barrioToolStripMenuItem.Name = "barrioToolStripMenuItem";
-            this.barrioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barrioToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.barrioToolStripMenuItem.Text = "Barrio";
             this.barrioToolStripMenuItem.Click += new System.EventHandler(this.barrioToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.salirToolStripMenuItem.Text = "Salir ";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // toolStripMenuConeccion
             // 
             this.toolStripMenuConeccion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStripMenuConeccion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tSEstadoConeccion});
+            this.tSLabelEstadoConeccion});
             this.toolStripMenuConeccion.Location = new System.Drawing.Point(0, 425);
             this.toolStripMenuConeccion.Name = "toolStripMenuConeccion";
             this.toolStripMenuConeccion.Size = new System.Drawing.Size(500, 25);
             this.toolStripMenuConeccion.TabIndex = 1;
             this.toolStripMenuConeccion.Text = "toolConeccionBD";
             // 
-            // tSEstadoConeccion
+            // tSLabelEstadoConeccion
             // 
-            this.tSEstadoConeccion.Name = "tSEstadoConeccion";
-            this.tSEstadoConeccion.Size = new System.Drawing.Size(10, 22);
-            this.tSEstadoConeccion.Text = ".";
+            this.tSLabelEstadoConeccion.Name = "tSLabelEstadoConeccion";
+            this.tSLabelEstadoConeccion.Size = new System.Drawing.Size(10, 22);
+            this.tSLabelEstadoConeccion.Text = ".";
             // 
             // frmInicio
             // 
@@ -195,7 +195,7 @@
         private System.Windows.Forms.ToolStripMenuItem barrioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStripMenuConeccion;
-        private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
+        private System.Windows.Forms.ToolStripLabel tSLabelEstadoConeccion;
     }
 }
 

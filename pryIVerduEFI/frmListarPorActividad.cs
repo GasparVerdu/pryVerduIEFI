@@ -16,5 +16,10 @@ namespace pryIVerduEFI
         {
             InitializeComponent();
         }
+
+        private void frmListarPorActividad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

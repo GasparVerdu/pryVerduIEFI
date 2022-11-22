@@ -28,38 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.dgvListarClientes = new System.Windows.Forms.DataGridView();
             this.NombreApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Actividad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
+            this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.btnVolver = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).BeginInit();
+            this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListarClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreApellido,
             this.Direccion,
             this.Barrio,
             this.Actividad,
             this.Saldo});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnListar
-            // 
-            this.btnListar.Location = new System.Drawing.Point(465, 168);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(94, 32);
-            this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.dgvListarClientes.Location = new System.Drawing.Point(12, 12);
+            this.dgvListarClientes.Name = "dgvListarClientes";
+            this.dgvListarClientes.Size = new System.Drawing.Size(547, 150);
+            this.dgvListarClientes.TabIndex = 0;
             // 
             // NombreApellido
             // 
@@ -86,28 +81,71 @@
             this.Saldo.HeaderText = "Saldo";
             this.Saldo.Name = "Saldo";
             // 
+            // btnListar
+            // 
+            this.btnListar.Location = new System.Drawing.Point(465, 168);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(94, 32);
+            this.btnListar.TabIndex = 1;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            // 
+            // tSConeccionBd
+            // 
+            this.tSConeccionBd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tSConeccionBd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tSEstadoConeccion});
+            this.tSConeccionBd.Location = new System.Drawing.Point(0, 207);
+            this.tSConeccionBd.Name = "tSConeccionBd";
+            this.tSConeccionBd.Size = new System.Drawing.Size(573, 25);
+            this.tSConeccionBd.TabIndex = 16;
+            this.tSConeccionBd.Text = "toolStrip1";
+            // 
+            // tSEstadoConeccion
+            // 
+            this.tSEstadoConeccion.Name = "tSEstadoConeccion";
+            this.tSEstadoConeccion.Size = new System.Drawing.Size(86, 22);
+            this.tSEstadoConeccion.Text = "toolStripLabel1";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(365, 168);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(94, 31);
+            this.btnVolver.TabIndex = 17;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            // 
             // frmListarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 232);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.tSConeccionBd);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListarClientes);
             this.Name = "frmListarClientes";
             this.Text = "frmListarClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).EndInit();
+            this.tSConeccionBd.ResumeLayout(false);
+            this.tSConeccionBd.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListarClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Actividad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.ToolStrip tSConeccionBd;
+        private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

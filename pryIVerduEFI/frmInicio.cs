@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace pryIVerduEFI
 {
     public partial class frmInicio : Form
     {
+        OleDbConnection conexionBaseDatos = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = BD_Clientes.accdb");
+        OleDbCommand comandoBD = new OleDbCommand();
         public frmInicio()
         {
             InitializeComponent();
@@ -24,7 +28,20 @@ namespace pryIVerduEFI
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                conexionBaseDatos = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=BD_Clientes.accdb");
+                conexionBaseDatos.Open();
+                toolStripMenuConeccion.BackColor = Color.Green;
+                tSLabelEstadoConeccion.Text = "Conectado correctamente" + " " + DateTime.Now;
+            }
+            catch (Exception mensajito)
+            {
+                toolStripMenuConeccion.Text = mensajito.Message;
+                tSLabelEstadoConeccion.BackColor = Color.Red;
+                //throw;
+            }
+            conexionBaseDatos.Close();
         }
 
         private void agregarClienteToolStripMenuItem_Click(object sender, EventArgs e)
