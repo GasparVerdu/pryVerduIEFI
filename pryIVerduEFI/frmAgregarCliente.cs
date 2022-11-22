@@ -33,6 +33,7 @@ namespace pryIVerduEFI
             //y hay que buscarlo
             conexionBaseDatos.Open();
             comandoBD.Connection = conexionBaseDatos;
+            //command type indica que el tipo de comando es d acceso directo a una tabla
             comandoBD.CommandType = CommandType.TableDirect;
             comandoBD.CommandText = "Barrio";
 

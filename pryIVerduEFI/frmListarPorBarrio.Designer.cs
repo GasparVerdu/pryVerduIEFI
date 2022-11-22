@@ -49,6 +49,10 @@
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
             this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.prtVentana = new System.Windows.Forms.PrintDialog();
+            this.prtDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarPorBarrio)).BeginInit();
             this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +137,7 @@
             this.btnListar.TabIndex = 16;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvListarPorBarrio
             // 
@@ -182,6 +187,7 @@
             // 
             // cboBarrio
             // 
+            this.cboBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(184, 21);
             this.cboBarrio.Name = "cboBarrio";
@@ -224,11 +230,41 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(438, 274);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(112, 23);
+            this.btnImprimir.TabIndex = 29;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(320, 274);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(112, 23);
+            this.btnGenerar.TabIndex = 28;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // prtVentana
+            // 
+            this.prtVentana.UseEXDialog = true;
+            // 
+            // prtDocumento
+            // 
+            this.prtDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.prtDocumento_PrintPage);
+            // 
             // frmListarPorBarrio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 450);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.tSConeccionBd);
             this.Controls.Add(this.lblResTotal);
@@ -245,6 +281,7 @@
             this.Controls.Add(this.lblBarrio);
             this.Name = "frmListarPorBarrio";
             this.Text = "frmListarPorBarrio";
+            this.Load += new System.EventHandler(this.frmListarPorBarrio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarPorBarrio)).EndInit();
             this.tSConeccionBd.ResumeLayout(false);
             this.tSConeccionBd.PerformLayout();
@@ -276,5 +313,9 @@
         private System.Windows.Forms.ToolStrip tSConeccionBd;
         private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.PrintDialog prtVentana;
+        private System.Drawing.Printing.PrintDocument prtDocumento;
     }
 }

@@ -49,6 +49,10 @@
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
             this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.prtVentana = new System.Windows.Forms.PrintDialog();
+            this.prtDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarActividad)).BeginInit();
             this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +69,7 @@
             // 
             // cboActividades
             // 
+            this.cboActividades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboActividades.FormattingEnabled = true;
             this.cboActividades.Location = new System.Drawing.Point(159, 25);
             this.cboActividades.Name = "cboActividades";
@@ -125,6 +130,7 @@
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // lblSaldoMayor
             // 
@@ -223,12 +229,43 @@
             this.btnVolver.TabIndex = 17;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(295, 278);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(112, 23);
+            this.btnGenerar.TabIndex = 18;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(413, 278);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(112, 23);
+            this.btnImprimir.TabIndex = 19;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // prtVentana
+            // 
+            this.prtVentana.UseEXDialog = true;
+            // 
+            // prtDocumento
+            // 
+            this.prtDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.prtDocumento_PrintPage);
             // 
             // frmListarPorActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 450);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.tSConeccionBd);
             this.Controls.Add(this.lblResTotal);
@@ -277,5 +314,9 @@
         private System.Windows.Forms.ToolStrip tSConeccionBd;
         private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.PrintDialog prtVentana;
+        private System.Drawing.Printing.PrintDocument prtDocumento;
     }
 }

@@ -36,7 +36,7 @@
             this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnListar = new System.Windows.Forms.Button();
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
-            this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
+            this.tSLEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
             this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).BeginInit();
             this.tSConeccionBd.SuspendLayout();
@@ -89,23 +89,24 @@
             this.btnListar.TabIndex = 1;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // tSConeccionBd
             // 
             this.tSConeccionBd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tSConeccionBd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tSEstadoConeccion});
+            this.tSLEstadoConeccion});
             this.tSConeccionBd.Location = new System.Drawing.Point(0, 207);
             this.tSConeccionBd.Name = "tSConeccionBd";
             this.tSConeccionBd.Size = new System.Drawing.Size(573, 25);
             this.tSConeccionBd.TabIndex = 16;
             this.tSConeccionBd.Text = "toolStrip1";
             // 
-            // tSEstadoConeccion
+            // tSLEstadoConeccion
             // 
-            this.tSEstadoConeccion.Name = "tSEstadoConeccion";
-            this.tSEstadoConeccion.Size = new System.Drawing.Size(86, 22);
-            this.tSEstadoConeccion.Text = "toolStripLabel1";
+            this.tSLEstadoConeccion.Name = "tSLEstadoConeccion";
+            this.tSLEstadoConeccion.Size = new System.Drawing.Size(86, 22);
+            this.tSLEstadoConeccion.Text = "toolStripLabel1";
             // 
             // btnVolver
             // 
@@ -115,6 +116,7 @@
             this.btnVolver.TabIndex = 17;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmListarClientes
             // 
@@ -127,6 +129,7 @@
             this.Controls.Add(this.dgvListarClientes);
             this.Name = "frmListarClientes";
             this.Text = "frmListarClientes";
+            this.Load += new System.EventHandler(this.frmListarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).EndInit();
             this.tSConeccionBd.ResumeLayout(false);
             this.tSConeccionBd.PerformLayout();
@@ -145,7 +148,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.ToolStrip tSConeccionBd;
-        private System.Windows.Forms.ToolStripLabel tSEstadoConeccion;
+        private System.Windows.Forms.ToolStripLabel tSLEstadoConeccion;
         private System.Windows.Forms.Button btnVolver;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListarSaldos = new System.Windows.Forms.DataGridView();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,21 +41,21 @@
             this.lblResPromedios = new System.Windows.Forms.Label();
             this.tSConeccionBd = new System.Windows.Forms.ToolStrip();
             this.tSEstadoConeccion = new System.Windows.Forms.ToolStripLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarSaldos)).BeginInit();
             this.tSConeccionBd.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListarSaldos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListarSaldos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarSaldos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Documento,
             this.NombreApellido,
             this.Saldo});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(419, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvListarSaldos.Location = new System.Drawing.Point(12, 12);
+            this.dgvListarSaldos.Name = "dgvListarSaldos";
+            this.dgvListarSaldos.Size = new System.Drawing.Size(419, 150);
+            this.dgvListarSaldos.TabIndex = 0;
             // 
             // Documento
             // 
@@ -83,6 +83,7 @@
             this.btnListar.TabIndex = 1;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // lblTotalSaldos
             // 
@@ -168,10 +169,11 @@
             this.Controls.Add(this.lblTotalSocios);
             this.Controls.Add(this.lblTotalSaldos);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListarSaldos);
             this.Name = "frmListarSaldos";
             this.Text = "Listado de saldos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmListarSaldos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarSaldos)).EndInit();
             this.tSConeccionBd.ResumeLayout(false);
             this.tSConeccionBd.PerformLayout();
             this.ResumeLayout(false);
@@ -181,7 +183,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListarSaldos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
