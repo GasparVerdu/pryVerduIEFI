@@ -279,7 +279,14 @@ namespace pryIVerduEFI
             {
                 MessageBox.Show("Ingrese un documento");
             }
-           
+
+            txtNombreApellido.Text = "";
+            txtDireccion.Text = "";
+            txtSaldo.Text = "";
+            mskDocumento.Text = "";
+            cboActividad.SelectedIndex = -1;
+            cboBarrio.SelectedIndex = -1;
+
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

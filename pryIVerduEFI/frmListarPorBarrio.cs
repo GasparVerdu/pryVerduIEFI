@@ -254,5 +254,10 @@ namespace pryIVerduEFI
             reporte.Graphics.DrawString("Total: " + lblResTotal.Text + "", Letra, Brushes.Black, 550, posicion);
             MessageBox.Show("Lista impresa con exito!");
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
